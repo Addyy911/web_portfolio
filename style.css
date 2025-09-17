@@ -1,0 +1,151 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #F9F9F9;
+}
+.sidebar {
+  width: 220px;
+  background-color: #35522B;
+  color: white;
+  flex-shrink: 0;
+  padding: 20px 15px;
+}
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  background-color: #5B744B;
+}
+.content {
+  flex-grow: 1;
+  padding: 30px;
+}
+.btn-custom {
+  background-color: #728359;
+  color: white;
+}
+.btn-custom:hover {
+  background-color: #5B744B;
+}
+@media (max-width:768px) {
+  body { flex-direction: column; }
+  .sidebar { width:100%; display:flex; overflow-x:auto; }
+  .sidebar a { white-space:nowrap; margin-right:12px; }
+}
+
+.hero {
+  margin-top: 50px;
+}
+
+.hero {
+  margin-top: 40px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #A8D5BA; /* pastel green border */
+  object-fit: cover;
+}
+
+/* About Section */
+.about-text {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Skill Cards */
+.skill-card {
+  background: #F9FFF9; /* soft greenish white */
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Skill Icons */
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* Percentages */
+.percentage {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.social-links a {
+  width: 60px;      /* Bigger button */
+  height: 60px;     /* Bigger button */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;  /* Bigger icon */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover animation effect */
+.social-links a:hover {
+  transform: scale(1.2); /* More noticeable zoom */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* Gmail */
+.social-links a:nth-child(1) { color: #D44638; }
+.social-links a:nth-child(1):hover { background-color: #D44638; color: #fff; }
+
+/* Facebook */
+.social-links a:nth-child(2) { color: #1877F2; }
+.social-links a:nth-child(2):hover { background-color: #1877F2; color: #fff; }
+
+/* Instagram */
+.social-links a:nth-child(3) { color: #E4405F; }
+.social-links a:nth-child(3):hover { background-color: #E4405F; color: #fff; }
+
+/* Twitter */
+.social-links a:nth-child(4) { color: #1DA1F2; }
+.social-links a:nth-child(4):hover { background-color: #1DA1F2; color: #fff; }
+
+/* LinkedIn */
+.social-links a:nth-child(5) { color: #0077B5; }
+.social-links a:nth-child(5):hover { background-color: #0077B5; color: #fff; }
+
+/* GitHub */
+.social-links a:nth-child(6) { color: #333; }
+.social-links a:nth-child(6):hover { background-color: #333; color: #fff; }
+
+/* TikTok */
+.social-links a:nth-child(7) { color: #000000; }
+.social-links a:nth-child(7):hover { background-color: #25F4EE; color: #fff; }
+

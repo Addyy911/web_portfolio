@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero text-center d-flex align-items-center justify-content-center position-relative" 
+         style="min-height: 60vh; background: linear-gradient(135deg, #A8D5BA, #A7C7E7); overflow: hidden;">
+
+  <!-- Floating circles for soft animation -->
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+
+  <div class="text-white z-2">
+    <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Hi, I’m Lady Lee Molina</h1>
+    <p class="lead">Aspiring IT Specialist & Creative Learner</p>
+    <a href="{{ url_for('projects') }}" class="btn btn-custom btn-lg mt-3">View My Projects</a>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  .btn-custom {
+    background-color: #5f8d63;
+    color: #fff;
+    border-radius: 30px;
+    padding: 12px 28px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+  }
+  .btn-custom:hover {
+    background-color: #466b4e;
+    transform: scale(1.05);
+  }
+
+  /* Floating pastel circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    animation: float 10s infinite ease-in-out alternate;
+    z-index: 1;
+  }
+  .circle1 { width: 160px; height: 160px; top: 15%; left: 12%; background: rgba(200, 245, 200, 0.35); }
+  .circle2 { width: 220px; height: 220px; bottom: 12%; right: 8%; background: rgba(170, 230, 200, 0.35); }
+  .circle3 { width: 120px; height: 120px; top: 30%; right: 25%; background: rgba(180, 230, 240, 0.35); }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-25px) translateX(20px); }
+  }
+</style>
+
+{% endblock %}

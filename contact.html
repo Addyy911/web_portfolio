@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Contact Me</h1>
+  <p class="text-center">Send me a message or reach me through my social platforms below </p>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <!-- Contact Form -->
+  <div class="card shadow-sm p-4 mb-4">
+    <form method="POST" action="{{ url_for('contact') }}">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-custom w-100">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Social Links -->
+  <div class="text-center">
+    <h5>Or connect with me:</h5>
+    <div class="social-links mt-3">
+      <a href="https://facebook.com/molinaaddy" target="_blank"><i class="fab fa-facebook-f fa-lg mx-2"></i></a>
+      <a href="https://instagram.com/dmn_itz.addyy" target="_blank"><i class="fab fa-instagram fa-lg mx-2"></i></a>
+      <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter fa-lg mx-2"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin-in fa-lg mx-2"></i></a>
+      <a href="https://github.com/Addyy911" target="_blank"><i class="fab fa-github fa-lg mx-2"></i></a>
+      <a href="https://tiktok.com/@eleven.tvlipz" target="_blank"><i class="fab fa-tiktok fa-lg mx-2"></i></a>
+    </div>
+  </div>
+
+{% endblock %}
