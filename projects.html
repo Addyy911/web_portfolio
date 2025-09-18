@@ -1,44 +1,70 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="mb-4">My Projects</h1>
-<p class="lead">Here are some of the projects I’ve worked on, showcasing my skills in web development and system design.</p>
 
-<div class="row">
+<!-- Projects Section -->
+<section class="projects py-5" style="background: #f9f9f9;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif;">
+      My Projects
+    </h2>
+    <p class="text-center mb-4">Here are some of the projects I’ve worked on, showcasing my skills in web development and system design.</p>
+    
+    <div class="row g-4">
+      
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="menuli.png" class="card-img-top" alt="Menuli Screenshot">
+          <div class="card-body">
+            <h5 class="card-title">Menuli: Online Ordering System</h5>
+            <p class="card-text">A web-based ordering platform that recommends shops and allows customers to browse menus, place orders, and receive an order number without waiting in line.</p>
+            <a href="#" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
 
-<!-- Project 1: Menuli -->
-<div class="col-md-4 mb-4">
-  <div class="card shadow-sm h-100">
-    <img src="{{ url_for('static', filename='images/menuli.png') }}" class="card-img-top" alt="Menuli Screenshot">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Menuli: Online Ordering System</h5>
-      <p class="card-text">A web-based ordering platform that recommends shops and allows customers to browse menus, place orders, and receive an order number without waiting in line.</p>
-      <a href="#" class="btn btn-custom mt-auto">View Details</a>
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="addy.jpg" class="card-img-top" alt="Flask Portfolio Screenshot">
+          <div class="card-body">
+            <h5 class="card-title">Flask Portfolio</h5>
+            <p class="card-text">A personal portfolio website built with Flask and Bootstrap, featuring responsive design and elegant styling.</p>
+            <a href="#" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="menuki_web.png" class="card-img-top" alt="Information System Screenshot">
+          <div class="card-body">
+            <h5 class="card-title">Information System</h5>
+            <p class="card-text">An online management system designed to handle customer orders, track data, and generate reports efficiently.</p>
+            <a href="#" class="btn btn-custom">View Details</a>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
-</div>
+</section>
 
-<!-- Project 2 -->
-<div class="col-md-4 mb-4">
-  <div class="card shadow-sm h-100">
-    <img src="{{ url_for('static', filename='images/addy.jpg') }}" class="card-img-top" alt="Flask poprtfolio">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Flask Portfolio</h5>
-      <p class="card-text">A personal portfolio website built with Flask and Bootstrap, featuring responsive design and elegant styling.</p>
-      <a href="#" class="btn btn-custom mt-auto">View Details</a>
-    </div>
-  </div>
-</div>
-
-  <!-- Project 3 -->
-<div class="col-md-4 mb-4">
-  <div class="card shadow-sm h-100">
-    <img src="{{ url_for('static', filename='images/menuki_web.png') }}" class="card-img-top" alt="Info Systemt">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Information System</h5>
-      <p class="card-text">An online management system designed to handle customer orders, track data, and generate reports efficiently.</p>
-      <a href="#" class="btn btn-custom mt-auto">View Details</a>
-    </div>
-  </div>
-</div>
+<!-- Extra styling for buttons -->
+<style>
+  .btn-custom {
+    background-color: #5f8d63;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  .btn-custom:hover {
+    background-color: #466b4e;
+    transform: scale(1.05);
+  }
+</style>
 
 {% endblock %}
